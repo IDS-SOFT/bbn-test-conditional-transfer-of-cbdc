@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config(); // Load environment variables from .env file
 import { ethers } from "ethers";
 const hre = require("hardhat");
-const ConditionalCBDCTransferjson = require("./../artifacts/contracts/retail-cbdc.sol/ConditionalCBDCTransfer.json");
+const ConditionalCBDCTransferjson = require("./../artifacts/contracts/conditional_transfer_cbdc.sol/ConditionalCBDCTransfer.json");
 
 const contractAddress: string = process.env.CONTRACT_ADDRESS || "";
 const contractABI: any[] = ConditionalCBDCTransferjson.abi;
