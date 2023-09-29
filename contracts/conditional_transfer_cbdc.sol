@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 contract ConditionalCBDCTransfer {
     IERC20 public cbdcToken; // The CBDC token contract
 
-    event CheckBalance(string text, uint amount);
+    event CheckBalance(uint amount);
 
     // constructor(address _cbdcToken) {
     //     cbdcToken = IERC20(_cbdcToken);
@@ -25,10 +25,8 @@ contract ConditionalCBDCTransfer {
     }
     
     function getBalance(address user_account) external returns (uint){
-    
-       string memory data = "User Balance is : ";
        uint user_bal = user_account.balance;
-       emit CheckBalance(data, user_bal );
+       emit CheckBalance(user_bal );
        return (user_bal);
 
     }
