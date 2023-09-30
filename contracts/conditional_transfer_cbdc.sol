@@ -25,9 +25,9 @@ contract ConditionalCBDCTransfer {
     }
     
     function getBalance(address user_account) external returns (uint){
-       uint user_bal = user_account.balance;
-       emit CheckBalance(user_bal );
-       return (user_bal);
-
+        require(user_account != address(0), "Invalid address");
+        uint user_bal = user_account.balance;
+        emit CheckBalance(user_bal);
+        return (user_bal);
     }
 }
